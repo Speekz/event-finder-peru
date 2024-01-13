@@ -70,7 +70,11 @@ export default function Home() {
                   <Hits />
                 </div>
               </div>
-            ) : null}
+            ) : (
+              <div className="mt-20 flex flex-col w-full items-center">
+                <span>¡Empieza a buscar el evento al cual deseas ir!</span>
+              </div>
+            )}
           </div>
           {/* <Stats /> */}
         </main>
