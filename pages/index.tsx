@@ -1,16 +1,11 @@
+import { useState } from "react";
 import TypesenseInstantsearchAdapter from "typesense-instantsearch-adapter";
-import {
-  Hits,
-  InstantSearch,
-  // Pagination,
-  RefinementList,
-  Stats,
-} from "react-instantsearch-dom";
+import { InstantSearch, RefinementList, Stats } from "react-instantsearch-dom";
 
-import type { Event } from "@/utils/types";
 import { SearchBox } from "@/components/atoms/SearchBox";
 import { Pagination } from "@/components/atoms/Pagination";
-import { useState } from "react";
+import { Hit } from "@/components/atoms/Hit";
+import { Hits } from "@/components/molecules/Hits";
 
 const typesenseInstantsearchAdapter = new TypesenseInstantsearchAdapter({
   server: {
@@ -31,8 +26,11 @@ const typesenseInstantsearchAdapter = new TypesenseInstantsearchAdapter({
 
 export default function Home() {
   const [searchValue, setSearchValue] = useState<string>("");
-  const Hit = ({ hit }: { hit: Event }) => <p>{hit.title}</p>;
-  const se = (value: any) => {
+  const [searchStarted, setSearchStarted] = useState<boolean>(false);
+
+  const handleSearchStateHits = (value: any) => {
+    setSearchStarted(value.attributeForMyQuery !== "");
+
     if (searchValue !== value.attributeForMyQuery) value.page = 1;
 
     setSearchValue(value.attributeForMyQuery);
@@ -42,20 +40,22 @@ export default function Home() {
       <InstantSearch
         indexName="events"
         searchClient={typesenseInstantsearchAdapter.searchClient}
-        onSearchStateChange={se}
+        onSearchStateChange={handleSearchStateHits}
       >
         {/* <RefinementList attribute="provider" /> */}
-        <main className="flex w-full h-full ">
-          <div className="flex flex-1 flex-col items-center justify-center border-4 border-red-400">
+        <main className="w-full h-full">
+          <div className="flex flex-1 flex-col items-center justify-center">
             <SearchBox />
-            <div className="flex flex-col w-1/2 items-center border-4 border-blue-400">
-              <div className="flex h-72 w-full items-left">
-                <Hits hitComponent={Hit} />
+            {searchStarted ? (
+              <div className="flex flex-col w-full items-center">
+                <div className="flex flex-row w-full justify-center">
+                  <Pagination />
+                </div>
+                <div className="h-full w-full inline-flex items-left">
+                  <Hits />
+                </div>
               </div>
-              <div className="flex flex-row w-full justify-center">
-                <Pagination />
-              </div>
-            </div>
+            ) : null}
           </div>
           {/* <Stats /> */}
         </main>
