@@ -35,6 +35,21 @@ Typesense es un motor de "Fuzzy Search" el cual busca proximidad en lugar de exa
 
 JSDom es una herramienta para "emular" el contenido de una página y acceder al **DOM**, con el cual podemos realizar un escaneo de las páginas y obtener la información necesaria que hace este proyecto funcionar.
 
+## Informacion disponible
+
+En Eventos Perú obtenemos la siguiente informacion de las ticketeras:
+
+- Nombre
+- Imagen
+- URL
+
+Nosotros pretendemos en un futuro mostrar:
+
+- Detalle del evento
+- Status del evento (finalizado o no)
+- Fechas
+- Precios
+
 ## Disclaimer
 
 El proyecto fue realizado como parte de un reto personal libre y no tiene como objetivo dañar a ninguna de las ticketeras mencionadas.
