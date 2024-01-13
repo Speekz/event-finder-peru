@@ -1,3 +1,4 @@
+import { Input } from "@material-tailwind/react";
 import { createConnector } from "react-instantsearch-dom";
 
 const connectWithQuery = createConnector({
@@ -25,11 +26,12 @@ const connectWithQuery = createConnector({
 
 export const SearchBox = connectWithQuery(({ currentRefinement, refine }) => {
   return (
-    <input
-      type="input"
+    <Input
+      crossOrigin={false}
       value={currentRefinement}
       onChange={(e) => refine(e.currentTarget.value)}
-      className="w-96 md:w-42 border-black border-2 shadow-sm"
+      label="Busca tu evento..."
+      size="md"
     />
   );
 });

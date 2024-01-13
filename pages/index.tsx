@@ -45,13 +45,19 @@ export default function Home() {
         {/* <RefinementList attribute="provider" /> */}
         <main className="w-full h-full">
           <div className="flex flex-1 flex-col items-center justify-center">
-            <SearchBox />
+            <div className="fixed top-0 bg-white w-full z-10 py-4">
+              <div className="flex justify-center w-full">
+                <div className="flex w-64 md:w-96">
+                  <SearchBox />
+                </div>
+              </div>
+            </div>
             {searchStarted ? (
-              <div className="flex flex-col w-full items-center">
+              <div className="mt-20 flex flex-col w-full items-center">
                 <div className="flex flex-row w-full justify-center">
                   <Pagination />
                 </div>
-                <div className="h-full w-full inline-flex items-left">
+                <div className="h-full w-full inline-flex justify-center">
                   <Hits />
                 </div>
               </div>
