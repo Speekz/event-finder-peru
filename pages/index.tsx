@@ -8,8 +8,8 @@ import {
 } from "react-instantsearch-dom";
 
 import type { Event } from "@/utils/types";
-import { SearchBox } from "@/components/atom/SearchBox";
-import { Pagination } from "@/components/atom/Pagination";
+import { SearchBox } from "@/components/atoms/SearchBox";
+import { Pagination } from "@/components/atoms/Pagination";
 import { useState } from "react";
 
 const typesenseInstantsearchAdapter = new TypesenseInstantsearchAdapter({
