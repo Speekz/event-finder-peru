@@ -1,40 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Eventos Perú
 
-## Getting Started
+Eventos Perú es un agregador de eventos de diferentes plataformas, específicamente:
 
-First, run the development server:
+- Teleticket
+- Joinnus
+- Ticketmaster
+- Passline
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Solo debes buscar el nombre en el buscador y, si existe en alguna de las plataformas de tickets mencionadas anteriormente, este aparecerá como resultado de tu busqueda.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Los eventos son actualizados diariamente.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Propósito
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+El propósito del proyecto viene de la complejidad para recordar dónde se deben comprar las entradas de un evento en particular.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Ejemplo:** _Uno recuerda que va a venir Taylor Swift a Lima, pero no necesariamente sabe por cuál de las múltiples plataformas de tickets puede adquirir sus entradas._
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Desarrollo
 
-## Learn More
+Las tecnologías utilizadas para este proyecto son las siguientes:
 
-To learn more about Next.js, take a look at the following resources:
+- Backend
+  - NodeJS v18
+  - JSDom
+  - Firebase
+  - Typesense Node
+- Frontend
+  - NextJS 13
+  - Typesense Client
+  - TailwindCSS
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Typesense es un motor de "Fuzzy Search" el cual busca proximidad en lugar de exactitud a la hora de realizar una busqueda.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+JSDom es una herramienta para "emular" el contenido de una página y acceder al **DOM**, con el cual podemos realizar un escaneo de las páginas y obtener la información necesaria que hace este proyecto funcionar.
 
-## Deploy on Vercel
+## Disclaimer
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+El proyecto fue realizado como parte de un reto personal libre y no tiene como objetivo dañar a ninguna de las ticketeras mencionadas.

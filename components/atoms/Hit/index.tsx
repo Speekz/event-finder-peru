@@ -6,7 +6,7 @@ export const Hit = ({ hit }: { hit: Event }) => {
   return (
     <div className="flex flex-col items-center justify-center pl-2 pr-4 py-4">
       <div className="shadow-lg rounded-b-xl">
-        <Link href={hit.url}>
+        <Link href={hit.url} target="_blank">
           <img
             src={hit.imageURL}
             alt={hit.title}
