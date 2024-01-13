@@ -4,8 +4,8 @@ import { InstantSearch, RefinementList, Stats } from "react-instantsearch-dom";
 
 import { SearchBox } from "@/components/atoms/SearchBox";
 import { Pagination } from "@/components/atoms/Pagination";
-import { Hit } from "@/components/atoms/Hit";
 import { Hits } from "@/components/molecules/Hits";
+import Link from "next/link";
 
 const typesenseInstantsearchAdapter = new TypesenseInstantsearchAdapter({
   server: {
@@ -46,9 +46,18 @@ export default function Home() {
         <main className="w-full h-full">
           <div className="flex flex-1 flex-col items-center justify-center">
             <div className="fixed top-0 bg-white w-full z-10 py-4">
-              <div className="flex justify-center w-full">
+              <div className="flex justify-between items-center w-full">
+                <div className="ml-8"></div>
                 <div className="flex w-64 md:w-96">
                   <SearchBox />
+                </div>
+                <div className="mr-4">
+                  <Link
+                    href="https://github.com/Speekz/event-finder-peru"
+                    target="_blank"
+                  >
+                    <img src="/github-mark.png" className="w-8 h-8" />
+                  </Link>
                 </div>
               </div>
             </div>
