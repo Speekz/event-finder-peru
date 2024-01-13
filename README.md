@@ -2,10 +2,10 @@
 
 Eventos Perú es un agregador de eventos de diferentes plataformas, específicamente:
 
-- Teleticket
-- Joinnus
-- Ticketmaster
-- Passline
+- [Teleticket](https://teleticket.com.pe/)
+- [Joinnus](https://www.joinnus.com/)
+- [Ticketmaster](https://www.ticketmaster.pe/)
+- [Passline](https://www.passline.com/home)
 
 Solo debes buscar el nombre en el buscador y, si existe en alguna de las plataformas de tickets mencionadas anteriormente, este aparecerá como resultado de tu busqueda.
 
@@ -25,13 +25,13 @@ Las tecnologías utilizadas para este proyecto son las siguientes:
   - NodeJS v18
   - JSDom
   - Firebase
-  - Typesense Node
+  - Typesense Cluster
 - Frontend
   - NextJS 13
   - Typesense Client
   - TailwindCSS
 
-Typesense es un motor de "Fuzzy Search" el cual busca proximidad en lugar de exactitud a la hora de realizar una busqueda.
+[Typesense](https://typesense.org/) es un motor de "Fuzzy Search" el cual busca proximidad en lugar de exactitud a la hora de realizar una busqueda.
 
 JSDom es una herramienta para "emular" el contenido de una página y acceder al **DOM**, con el cual podemos realizar un escaneo de las páginas y obtener la información necesaria que hace este proyecto funcionar.
 
