@@ -27,7 +27,7 @@ const connectWithQuery = createConnector({
 export const SearchBox = connectWithQuery(({ currentRefinement, refine }) => {
   return (
     <Input
-      crossOrigin={false}
+      crossOrigin="false"
       value={currentRefinement}
       onChange={(e) => refine(e.currentTarget.value)}
       label="Busca tu evento..."
