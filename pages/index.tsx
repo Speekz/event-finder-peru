@@ -56,7 +56,7 @@ export default function Home() {
                     href="https://github.com/Speekz/event-finder-peru"
                     target="_blank"
                   >
-                    <img src="/github-mark.png" className="w-8 h-8" />
+                    <img src="/assets/github-mark.png" className="w-8 h-8" />
                   </Link>
                 </div>
               </div>

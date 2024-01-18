@@ -3,11 +3,13 @@ export interface Event {
   title: string;
   url: string;
   imageURL: string;
-  provider:
-    | "Ticketealo"
-    | "Joinnus"
-    | "Teleticket"
-    | "Ticketmaster"
-    | "Passline"
-    | "Others";
+  provider: Provider;
 }
+
+export type Provider =
+  | "Ticketealo"
+  | "Joinnus"
+  | "Teleticket"
+  | "Ticketmaster"
+  | "Passline"
+  | "Others";
