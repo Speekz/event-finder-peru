@@ -7,13 +7,13 @@ Eventos Perú es un agregador de eventos de diferentes plataformas, específicam
 - [Ticketmaster](https://www.ticketmaster.pe/)
 - [Passline](https://www.passline.com/home)
 
-Solo debes buscar el nombre en el buscador y, si existe en alguna de las plataformas de tickets mencionadas anteriormente, este aparecerá como resultado de tu busqueda.
+Solo debes buscar el nombre del evento en el buscador y, si existe en alguna de las plataformas de tickets mencionadas anteriormente, este aparecerá como resultado de tu busqueda.
 
 Los eventos son actualizados diariamente.
 
 ## Propósito
 
-El propósito del proyecto viene de la complejidad para recordar dónde se deben comprar las entradas de un evento en particular.
+El propósito del proyecto viene de la dificultad para recordar dónde se deben comprar las entradas de un evento en particular.
 
 **Ejemplo:** _Uno recuerda que va a venir Taylor Swift a Lima, pero no necesariamente sabe por cuál de las múltiples plataformas de tickets puede adquirir sus entradas._
 
@@ -43,7 +43,7 @@ En Eventos Perú obtenemos la siguiente informacion de las ticketeras:
 - Imagen
 - URL
 
-Nosotros pretendemos en un futuro mostrar:
+Version 2:
 
 - Detalle del evento
 - Status del evento (finalizado o no)
@@ -52,4 +52,4 @@ Nosotros pretendemos en un futuro mostrar:
 
 ## Disclaimer
 
-El proyecto fue realizado como parte de un reto personal libre y no tiene como objetivo dañar a ninguna de las ticketeras mencionadas.
+El proyecto fue realizado como parte de un reto personal libre.
